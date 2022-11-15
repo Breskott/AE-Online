@@ -27,7 +27,6 @@
             name="km"
             label="Km"
             :value="old('km', ($editing ? $car->km : ''))"
-            max="255"
             placeholder="Km"
             required
         ></x-inputs.number>
@@ -71,7 +70,6 @@
             name="ano"
             label="Ano"
             :value="old('ano', ($editing ? $car->ano : ''))"
-            max="255"
             placeholder="Ano"
             required
         ></x-inputs.number>

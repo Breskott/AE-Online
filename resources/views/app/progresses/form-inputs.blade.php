@@ -52,24 +52,24 @@
     </x-inputs.group>
 
     <x-inputs.group class="col-sm-12 col-lg-6">
-        <x-inputs.text
+        <x-inputs.time
             name="hora_ini"
             label="Hora Inicial Aula"
             :value="old('hora_ini', ($editing ? $progress->hora_ini : ''))"
             maxlength="255"
             placeholder="Hora Inicial Aula"
             required
-        ></x-inputs.text>
+        ></x-inputs.time>
     </x-inputs.group>
 
     <x-inputs.group class="col-sm-12 col-lg-6">
-        <x-inputs.text
+        <x-inputs.time
             name="hora_fim"
             label="Hora Final Aula"
             :value="old('hora_fim', ($editing ? $progress->hora_fim : ''))"
             maxlength="255"
             placeholder="Hora Final Aula"
             required
-        ></x-inputs.text>
+        ></x-inputs.time>
     </x-inputs.group>
 </div>

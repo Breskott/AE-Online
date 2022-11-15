@@ -30,7 +30,7 @@ class CarStoreRequest extends FormRequest
             'cor' => ['required', 'max:255', 'string'],
             'marca' => ['required', 'max:255', 'string'],
             'modelo' => ['required', 'max:255', 'string'],
-            'ano' => ['required', 'numeric', 'max:4'],
+            'ano' => ['required', 'numeric'],
         ];
     }
 }
