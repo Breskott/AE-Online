@@ -8,6 +8,19 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>AE Online</title>
+        <title>{{ config('app.name', 'AE Online') }} </title>
+        <meta content="Sistema de Auto Escola Online - Cadastre agora mesmo!" name="description">
+        <meta content="Sistema, Auto Escola, Online, Cadastro, Controle de Estoque, Aulas" name="keywords">
+
+        <!-- Meta Adsense/Search Tag -->
+        <meta property="og:title" content="{{ config('app.name', 'AE Online') }}"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="{{ asset('icon.png') }}"/>
+        <meta property="og:description" content="Sistema de Auto Escola Online - Cadastre agora mesmo!"/>
+        <meta property="og:site_name" content="{{ config('app.name', 'AE Online') }}"/>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
 
         <!-- Favicons -->
         <link href="{{ asset('icon.png') }}" rel="icon">
