@@ -74,7 +74,7 @@
                                 {{ optional($progress->student)->nome ?? '-' }}
                             </td>
                             <td>
-                                {{ optional($progress->car)->placa.' - '.optional($progress->car)->marca ?? '-' }}
+                                {{ optional($progress->car)->placa.' / '.optional($progress->car)->marca ?? '-' }}
                             </td>
                             <td>
                                 {{ optional($progress->instructor)->nome ?? '-'

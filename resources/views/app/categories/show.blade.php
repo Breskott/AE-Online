@@ -18,7 +18,11 @@
                 </div>
                 <div class="mb-4">
                     <h5>@lang('crud.categories.inputs.ativo')</h5>
-                    <span>{{ $category->ativo ?? '-' }}</span>
+                    @if ($category->ativo == "S")
+                        <span>SIM</span>
+                    @else
+                        <span>NÃO</span>
+                    @endif
                 </div>
             </div>
 

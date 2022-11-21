@@ -62,7 +62,11 @@
                         @forelse($categories as $category)
                         <tr>
                             <td>{{ $category->descricao ?? '-' }}</td>
-                            <td>{{ $category->ativo ?? '-' }}</td>
+                            @if ($category->ativo == "S")
+                                <td>SIM</td>
+                            @else
+                                <td>NÃO</td>
+                            @endif
                             <td class="text-center" style="width: 134px;">
                                 <div
                                     role="group"

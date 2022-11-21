@@ -25,6 +25,37 @@ class Progress extends Model
 
     protected $table = 'progress';
 
+    public function setValorAttribute($value)
+    {
+        $this->attributes['valor'] = $this->numericMaskRemove($value);
+    }
+
+    public function getValorAttribute($value)
+    {
+        return $value;
+    }
+
+    public function getValorFormatedAttribute()
+    {
+        return number_format($this->valor, 2, ',', '.');
+    }
+
+    private function numericMaskRemove($num) {
+        $dotPos = strrpos($num, '.');
+        $commaPos = strrpos($num, ',');
+        $sep = (($dotPos > $commaPos) && $dotPos) ? $dotPos :
+            ((($commaPos > $dotPos) && $commaPos) ? $commaPos : false);
+
+        if (!$sep) {
+            return floatval(preg_replace("/[^0-9]/", "", $num));
+        }
+
+        return floatval(
+            preg_replace("/[^0-9]/", "", substr($num, 0, $sep)) . '.' .
+            preg_replace("/[^0-9]/", "", substr($num, $sep+1, strlen($num)))
+        );
+    }
+
     public function car()
     {
         return $this->belongsTo(Car::class);
@@ -39,4 +70,6 @@ class Progress extends Model
     {
         return $this->belongsTo(Student::class);
     }
+
+
 }

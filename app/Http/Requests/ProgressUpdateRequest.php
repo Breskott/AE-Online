@@ -28,7 +28,7 @@ class ProgressUpdateRequest extends FormRequest
             'car_id' => ['required', 'exists:cars,id'],
             'instructor_id' => ['required', 'exists:instructors,id'],
             'abastecimento' => ['required', 'max:255', 'string'],
-            'valor' => ['required', 'numeric'],
+            'valor' => ['nullable', 'string'],
             'hora_ini' => ['required', 'max:255', 'string'],
             'hora_fim' => ['required', 'max:255', 'string'],
         ];

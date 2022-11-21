@@ -29,11 +29,15 @@
                 </div>
                 <div class="mb-4">
                     <h5>@lang('crud.progresses.inputs.abastecimento')</h5>
-                    <span>{{ $progress->abastecimento ?? '-' }}</span>
+                    @if ($progress->abastecimento == "S")
+                        <span>SIM</span>
+                    @else
+                        <span>NÃO</span>
+                    @endif
                 </div>
                 <div class="mb-4">
                     <h5>@lang('crud.progresses.inputs.valor')</h5>
-                    <span>{{ $progress->valor ?? '-' }}</span>
+                    <span>{{ $progress->valor_formated ?? '-' }}</span>
                 </div>
                 <div class="mb-4">
                     <h5>@lang('crud.progresses.inputs.hora_ini')</h5>

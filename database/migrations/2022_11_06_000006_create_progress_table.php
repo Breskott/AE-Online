@@ -18,7 +18,7 @@ return new class extends Migration {
             $table->unsignedBigInteger('instructor_id');
             $table->unsignedBigInteger('student_id');
             $table->string('abastecimento', 255);
-            $table->double('valor');
+            $table->double('valor', 8, 2)->nullable();
             $table->string('hora_ini');
             $table->string('hora_fim');
 

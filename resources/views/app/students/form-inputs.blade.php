@@ -31,6 +31,7 @@
             :value="old('rg', ($editing ? $student->rg : ''))"
             maxlength="12"
             placeholder="RG"
+            id="rg"
             required
         ></x-inputs.text>
     </x-inputs.group>
@@ -119,6 +120,7 @@
     <script>
         $(document).ready(function ($) {
             $('#cpf').mask('999.999.999-99');
+            $('#rg').mask('99.999.999-A');
             $('#celular').mask('(99) 99999-9999');
             $('#telefone').mask('(99) 9999-9999');
         });

@@ -40,15 +40,14 @@
     </x-inputs.group>
 
     <x-inputs.group class="col-sm-12 col-lg-6">
-        <x-inputs.number
+        <x-inputs.text
             name="valor"
             label="Valor do Abastecimento"
-            :value="old('valor', ($editing ? $progress->valor : ''))"
+            :value="old('valor', ($editing ? $progress->valor_formated : ''))"
             max="255"
-            step="1"
             placeholder="Valor do Abastecimento"
-            required
-        ></x-inputs.number>
+            id="valor"
+        ></x-inputs.text>
     </x-inputs.group>
 
     <x-inputs.group class="col-sm-12 col-lg-6">
@@ -73,3 +72,11 @@
         ></x-inputs.time>
     </x-inputs.group>
 </div>
+
+@section('script_inject')
+    <script>
+        $(document).ready(function ($) {
+            $('#valor').mask("#.##0,00", {reverse: true});
+        });
+    </script>
+@endsection
