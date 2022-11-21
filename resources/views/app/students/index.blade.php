@@ -51,28 +51,7 @@
                                 @lang('crud.students.inputs.nome')
                             </th>
                             <th class="text-left">
-                                @lang('crud.students.inputs.cpf')
-                            </th>
-                            <th class="text-left">
-                                @lang('crud.students.inputs.rg')
-                            </th>
-                            <th class="text-left">
-                                @lang('crud.students.inputs.telefone')
-                            </th>
-                            <th class="text-left">
                                 @lang('crud.students.inputs.celular')
-                            </th>
-                            <th class="text-left">
-                                @lang('crud.students.inputs.rua')
-                            </th>
-                            <th class="text-left">
-                                @lang('crud.students.inputs.numero')
-                            </th>
-                            <th class="text-left">
-                                @lang('crud.students.inputs.bairro')
-                            </th>
-                            <th class="text-left">
-                                @lang('crud.students.inputs.cidade')
                             </th>
                             <th class="text-left">
                                 @lang('crud.students.inputs.status_aula')
@@ -86,14 +65,7 @@
                         @forelse($students as $student)
                         <tr>
                             <td>{{ $student->nome ?? '-' }}</td>
-                            <td>{{ $student->cpf ?? '-' }}</td>
-                            <td>{{ $student->rg ?? '-' }}</td>
-                            <td>{{ $student->telefone ?? '-' }}</td>
                             <td>{{ $student->celular ?? '-' }}</td>
-                            <td>{{ $student->rua ?? '-' }}</td>
-                            <td>{{ $student->numero ?? '-' }}</td>
-                            <td>{{ $student->bairro ?? '-' }}</td>
-                            <td>{{ $student->cidade ?? '-' }}</td>
                             <td>{{ $student->status_aula ?? '-' }}</td>
                             <td class="text-center" style="width: 134px;">
                                 <div

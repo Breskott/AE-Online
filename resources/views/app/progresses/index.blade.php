@@ -57,12 +57,6 @@
                                 @lang('crud.progresses.inputs.instructor_id')
                             </th>
                             <th class="text-left">
-                                @lang('crud.progresses.inputs.abastecimento')
-                            </th>
-                            <th class="text-right">
-                                @lang('crud.progresses.inputs.valor')
-                            </th>
-                            <th class="text-left">
                                 @lang('crud.progresses.inputs.hora_ini')
                             </th>
                             <th class="text-left">
@@ -80,14 +74,12 @@
                                 {{ optional($progress->student)->nome ?? '-' }}
                             </td>
                             <td>
-                                {{ optional($progress->car)->placa ?? '-' }}
+                                {{ optional($progress->car)->placa.' - '.optional($progress->car)->marca ?? '-' }}
                             </td>
                             <td>
                                 {{ optional($progress->instructor)->nome ?? '-'
                                 }}
                             </td>
-                            <td>{{ $progress->abastecimento ?? '-' }}</td>
-                            <td>{{ $progress->valor ?? '-' }}</td>
                             <td>{{ $progress->hora_ini ?? '-' }}</td>
                             <td>{{ $progress->hora_fim ?? '-' }}</td>
                             <td class="text-center" style="width: 134px;">

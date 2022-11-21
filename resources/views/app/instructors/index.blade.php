@@ -53,22 +53,10 @@
                                 @lang('crud.instructors.inputs.nome')
                             </th>
                             <th class="text-left">
-                                @lang('crud.instructors.inputs.cpf')
-                            </th>
-                            <th class="text-left">
-                                @lang('crud.instructors.inputs.rg')
-                            </th>
-                            <th class="text-left">
-                                @lang('crud.instructors.inputs.telefone')
-                            </th>
-                            <th class="text-left">
                                 @lang('crud.instructors.inputs.celular')
                             </th>
                             <th class="text-left">
                                 @lang('crud.instructors.inputs.credencial')
-                            </th>
-                            <th class="text-left">
-                                @lang('crud.instructors.inputs.email')
                             </th>
                             <th class="text-center">
                                 @lang('crud.common.actions')
@@ -79,12 +67,8 @@
                         @forelse($instructors as $instructor)
                         <tr>
                             <td>{{ $instructor->nome ?? '-' }}</td>
-                            <td>{{ $instructor->cpf ?? '-' }}</td>
-                            <td>{{ $instructor->rg ?? '-' }}</td>
-                            <td>{{ $instructor->telefone ?? '-' }}</td>
                             <td>{{ $instructor->celular ?? '-' }}</td>
                             <td>{{ $instructor->credencial ?? '-' }}</td>
-                            <td>{{ $instructor->email ?? '-' }}</td>
                             <td class="text-center" style="width: 134px;">
                                 <div
                                     role="group"

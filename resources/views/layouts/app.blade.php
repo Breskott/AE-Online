@@ -77,6 +77,9 @@
 
         <script src="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/js/pro.min.js"></script>
 
+        <!-- Mask form -->
+        <script src="{{ asset('assets/js/jquery_mask/jquery.mask.min.js') }}"></script>
+
         @if (session()->has('success'))
         <script>
             var notyf = new Notyf({dismissible: true})
@@ -112,5 +115,13 @@
                 })
             })
         </script>
+
+        <script type="text/javascript">
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
+
+        @yield('script_inject')
     </body>
 </html>

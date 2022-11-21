@@ -16,8 +16,9 @@
             name="cpf"
             label="CPF"
             :value="old('cpf', ($editing ? $instructor->cpf : ''))"
-            maxlength="11"
+            maxlength="14"
             placeholder="CPF"
+            id="cpf"
             required
         ></x-inputs.text>
     </x-inputs.group>
@@ -27,7 +28,7 @@
             name="rg"
             label="RG"
             :value="old('rg', ($editing ? $instructor->rg : ''))"
-            maxlength="9"
+            maxlength="12"
             placeholder="RG"
             required
         ></x-inputs.text>
@@ -40,6 +41,7 @@
             :value="old('telefone', ($editing ? $instructor->telefone : ''))"
             maxlength="255"
             placeholder="Telefone"
+            id="telefone"
             required
         ></x-inputs.text>
     </x-inputs.group>
@@ -51,6 +53,7 @@
             :value="old('celular', ($editing ? $instructor->celular : ''))"
             maxlength="255"
             placeholder="Celular"
+            id="celular"
             required
         ></x-inputs.text>
     </x-inputs.group>
@@ -77,3 +80,13 @@
         ></x-inputs.email>
     </x-inputs.group>
 </div>
+
+@section('script_inject')
+    <script>
+        $(document).ready(function ($) {
+            $('#cpf').mask('999.999.999-99');
+            $('#celular').mask('(99) 99999-9999');
+            $('#telefone').mask('(99) 9999-9999');
+        });
+    </script>
+@endsection

@@ -50,20 +50,11 @@
                             <th class="text-left">
                                 @lang('crud.cars.inputs.placa')
                             </th>
-                            <th class="text-right">
-                                @lang('crud.cars.inputs.km')
-                            </th>
-                            <th class="text-left">
-                                @lang('crud.cars.inputs.cor')
-                            </th>
                             <th class="text-left">
                                 @lang('crud.cars.inputs.marca')
                             </th>
                             <th class="text-left">
                                 @lang('crud.cars.inputs.modelo')
-                            </th>
-                            <th class="text-right">
-                                @lang('crud.cars.inputs.ano')
                             </th>
                             <th class="text-center">
                                 @lang('crud.common.actions')
@@ -77,11 +68,8 @@
                                 {{ optional($car->category)->descricao ?? '-' }}
                             </td>
                             <td>{{ $car->placa ?? '-' }}</td>
-                            <td>{{ $car->km ?? '-' }}</td>
-                            <td>{{ $car->cor ?? '-' }}</td>
                             <td>{{ $car->marca ?? '-' }}</td>
                             <td>{{ $car->modelo ?? '-' }}</td>
-                            <td>{{ $car->ano ?? '-' }}</td>
                             <td class="text-center" style="width: 134px;">
                                 <div
                                     role="group"

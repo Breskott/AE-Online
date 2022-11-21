@@ -15,8 +15,8 @@ return new class extends Migration {
         Schema::create('instructors', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nome')->nullable();
-            $table->string('cpf', 11);
-            $table->string('rg', 9);
+            $table->string('cpf', 50);
+            $table->string('rg', 50);
             $table->string('telefone');
             $table->string('celular');
             $table->string('credencial');

@@ -25,8 +25,8 @@ class StudentUpdateRequest extends FormRequest
     {
         return [
             'nome' => ['required', 'max:255', 'string'],
-            'cpf' => ['required', 'max:11', 'string'],
-            'rg' => ['required', 'max:9', 'string'],
+            'cpf' => ['required', 'max:14', 'string'],
+            'rg' => ['required', 'max:12', 'string'],
             'telefone' => ['required', 'max:255', 'string'],
             'celular' => ['required', 'max:255', 'string'],
             'rua' => ['required', 'max:255', 'string'],

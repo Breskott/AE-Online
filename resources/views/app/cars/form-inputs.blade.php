@@ -18,6 +18,7 @@
             :value="old('placa', ($editing ? $car->placa : ''))"
             maxlength="255"
             placeholder="Placa"
+            id="placa"
             required
         ></x-inputs.text>
     </x-inputs.group>
@@ -75,3 +76,11 @@
         ></x-inputs.number>
     </x-inputs.group>
 </div>
+
+@section('script_inject')
+    <script>
+        $(document).ready(function ($) {
+            $('#placa').mask('AAA-9A99');
+        });
+    </script>
+@endsection
