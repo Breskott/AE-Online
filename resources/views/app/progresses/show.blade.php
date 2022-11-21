@@ -47,6 +47,10 @@
                     <h5>@lang('crud.progresses.inputs.hora_fim')</h5>
                     <span>{{ $progress->hora_fim ?? '-' }}</span>
                 </div>
+                <div class="mb-4">
+                    <h5>Dia</h5>
+                    <span>{{ \Carbon\Carbon::parse($progress->created_at)->format('d/m/Y') ?? '-' }}</span>
+                </div>
             </div>
 
             <div class="mt-4">

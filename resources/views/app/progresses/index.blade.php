@@ -62,6 +62,9 @@
                             <th class="text-left">
                                 @lang('crud.progresses.inputs.hora_fim')
                             </th>
+                            <th class="text-left">
+                                Dia
+                            </th>
                             <th class="text-center">
                                 @lang('crud.common.actions')
                             </th>
@@ -82,6 +85,7 @@
                             </td>
                             <td>{{ $progress->hora_ini ?? '-' }}</td>
                             <td>{{ $progress->hora_fim ?? '-' }}</td>
+                            <td>{{ \Carbon\Carbon::parse($progress->created_at)->format('d/m/Y') ?? '-' }}</td>
                             <td class="text-center" style="width: 134px;">
                                 <div
                                     role="group"
